@@ -1,13 +1,4 @@
 # Pain Burden, Plasma Proteomics, and Incident Parkinson Disease
-
-This folder contains the analysis code supporting the manuscript `Main text.docx`.
-The code has been reorganized to follow the final analysis workflow in the Methods
-and Results sections.
-
-Raw participant-level UK Biobank, CHARLS, Olink, and PPMI data are not included in
-this repository. Place local input files under `code/data/` or set
-`PD_PAIN_DATA_DIR` to another private data directory.
-
 ## Main Analysis Methods
 
 - UK Biobank cohort construction, incident PD follow-up time, and 2-year landmark

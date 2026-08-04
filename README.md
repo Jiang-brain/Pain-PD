@@ -15,7 +15,7 @@ necessary approvals. The authors of this repository cannot provide, transfer,
 or authorize access to these datasets.
 
 After obtaining authorized access, users may place the required local input
-files under `code/data/` or set the environment variable `PD_PAIN_DATA_DIR` to
+files under `data/` or set the environment variable `PD_PAIN_DATA_DIR` to
 another secure, private data directory. The filenames listed below refer to
 locally prepared analysis files and are not distributed with this repository.
 
@@ -40,7 +40,6 @@ locally prepared analysis files and are not distributed with this repository.
 ## Directory Structure
 
 ```text
-code/
   00_setup/
     config.R
     ukb_helpers.R
@@ -75,7 +74,8 @@ code/
 
 ## Input Files
 
-By default, put private input files in `code/data/`:
+By default, place private input files in `data/`. This directory is excluded
+from version control and should not be uploaded to GitHub.
 
 - `PD_data.csv`: UK Biobank analytical source file.
 - `protein_new_missing60_filtered.csv`: Olink NPX protein matrix after QC.
@@ -84,12 +84,12 @@ By default, put private input files in `code/data/`:
 - `protein_intersection_FDR05.csv`: FDR-significant pain-PD overlap results.
 - `results_PPMI.csv`: PPMI protein-PD comparison data.
 
-Generated intermediate and result files are written to `code/results/`. Figures
-are written to `code/results/figures/`.
+Generated intermediate and result files are written to `results/`. Figures are
+written to `results/figures/`.
 
 ## Recommended Run Order
 
-Run commands from the `code/` directory.
+Run the following commands from the repository root directory.
 
 ```bash
 Rscript 01_data_preparation/01_build_ukb_followup_outcome.R

@@ -70,8 +70,6 @@ code/
     04_predict_pd_stable_elasticnet374_lgbm_cv.py
   06_figures/
     01_plot_main_epidemiology_results.R
-  archive/
-    PD_pain_legacy.R
   requirements.txt
 ```
 
@@ -141,30 +139,3 @@ Python packages are listed in `requirements.txt`:
 - `scipy`
 - `scikit-learn`
 - `lightgbm`
-
-## Reproducibility Notes
-
-- Elastic Net preprocessing is inside a sklearn `Pipeline`, so median imputation
-  and standardization are fitted within each outer training fold.
-- Nested Elastic Net uses fixed random seeds: `RANDOM_STATE = 20260525`,
-  10 outer folds, and 10 inner folds.
-- The final prediction scripts use Cox model linear predictors in their fitted
-  risk direction. Continuous NRI is computed from Cox absolute risk at the
-  evaluation horizon.
-- The organized main code has no hard-coded personal absolute paths. Personal
-  absolute paths remain only in `archive/PD_pain_legacy.R` for provenance.
-
-## Analyses That Still Need Manual Confirmation
-
-The manuscript Methods/Results mention several analyses that were not available
-as complete, clean, final scripts in the current `code/` folder:
-
-- CHARLS external validation logistic regression code.
-- STRING protein-protein interaction and GO/KEGG/Reactome/WikiPathways
-  enrichment scripts.
-- Formal Schoenfeld residual proportional hazards assumption checks.
-- Fully cleaned sensitivity scripts for dementia exclusion, pain medication,
-  vascular disease, cancer, diabetes, and sleep duration.
-
-These gaps should be resolved before public GitHub release if the repository is
-expected to reproduce every figure and supplementary table in the manuscript.

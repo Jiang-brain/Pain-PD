@@ -1,4 +1,24 @@
 # Pain Burden, Plasma Proteomics, and Incident Parkinson Disease
+## Data Availability and Access
+
+This repository contains analysis code only. Individual-level participant data
+and proteomic measurements from UK Biobank, the China Health and Retirement
+Longitudinal Study (CHARLS), the Parkinson's Progression Markers Initiative
+(PPMI), and the Olink-based proteomic datasets used in this study are not
+included or redistributed.
+
+Access to these data is controlled by the respective data providers and is
+subject to their application procedures, data-use agreements, and participant
+confidentiality requirements. Researchers wishing to reproduce the analyses
+must apply independently to the relevant data custodians and obtain the
+necessary approvals. The authors of this repository cannot provide, transfer,
+or authorize access to these datasets.
+
+After obtaining authorized access, users may place the required local input
+files under `code/data/` or set the environment variable `PD_PAIN_DATA_DIR` to
+another secure, private data directory. The filenames listed below refer to
+locally prepared analysis files and are not distributed with this repository.
+
 ## Main Analysis Methods
 
 - UK Biobank cohort construction, incident PD follow-up time, and 2-year landmark

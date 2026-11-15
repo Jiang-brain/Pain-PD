@@ -3,16 +3,25 @@
 Analysis code for the study of pain burden, genetic risk, plasma proteomics, and
 incident Parkinson disease (PD).
 
-## Analysis Overview
+## Data Availability and Access
 
-- **Figure 4:** Composite pain-score weights were estimated among participants
-  without proteomic data and applied to the proteomic cohort. The analysis
-  identified 24 shared proteins. Single-protein and joint mediation used
-  inverse odds-ratio weighting with 95% bootstrap confidence intervals.
-- **Figure 5:** Elastic Net (L1 and L2 regularization) selected a stable panel
-  of 370 proteins for LightGBM prediction. Performance was evaluated using
-  out-of-fold predictions. Panel C covers diagnoses after five years, with no
-  ten-year cutoff. No PCA was used in the final analyses.
+This repository contains analysis code only. Individual-level participant data
+and proteomic measurements from UK Biobank, the China Health and Retirement
+Longitudinal Study (CHARLS), the Parkinson's Progression Markers Initiative
+(PPMI), and the Olink-based proteomic datasets used in this study are not
+included or redistributed.
+
+Access to these data is controlled by the respective data providers and is
+subject to their application procedures, data-use agreements, and participant
+confidentiality requirements. Researchers wishing to reproduce the analyses
+must apply independently to the relevant data custodians and obtain the
+necessary approvals. The authors of this repository cannot provide, transfer,
+or authorize access to these datasets.
+
+After obtaining authorized access, users may place the required local input
+files under `data/` or set the environment variable `PD_PAIN_DATA_DIR` to
+another secure, private data directory. The filenames listed below refer to
+locally prepared analysis files and are not distributed with this repository.
 
 ## Repository Layout
 
